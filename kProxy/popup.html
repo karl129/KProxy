@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Proxy Switch</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        text-align: center;
+        background-color: #dee5d5;
+        border: 1px solid #d6fdbf;
+        margin: 0;
+        padding: 0;
+        width: 140px;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      #toggleProxy {
+        width: 130px;
+        padding: 10px 30px;
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #a0a6ae;
+        border: 1px solid #a0a6ae;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+        transition: background-color 0.3s, transform 0.1s;
+      }
+
+      #toggleProxy:hover {
+        background-color: #5a5b5c;
+      }
+
+      #toggleProxy:active {
+        transform: scale(0.98);
+      }
+
+      .active {
+        background-color: #4caf50 !important;
+      }
+
+      .active:hover {
+        background-color: #285e2a !important;
+      }
+      .container {
+        width: 130px;
+        display: flex;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      .addwhite-container {
+        margin-top: 20px;
+        color: #a0a6ae;
+      }
+
+      .longinput {
+        width: 90px;
+        margin-right: 5px;
+      }
+      .shortinput {
+        width: 40px;
+      }
+      .port {
+        width: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>KProxy</h1>
+    <div class="container">
+      <input type="text" name="" class="longinput" id="ip" value="" />
+      <input type="text" name="" class="port" id="port" value="" />
+    </div>
+    <button id="toggleProxy"></button>
+
+    <!-- <div class="container addwhite-container">
+      <input
+        type="text"
+        class="longinput"
+        id="whitelistEntry"
+        placeholder="*.example.cn"
+      />
+      <button class="shortinput" id="addToWhitelist">Add</button>
+    </div> -->
+    <script src="popup.js"></script>
+  </body>
+</html>

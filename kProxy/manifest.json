@@ -1,0 +1,25 @@
+{
+  "name": "HK_Proxy",
+  "description": "HK_Proxy",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["proxy", "tabs", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "HK_Proxy",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
